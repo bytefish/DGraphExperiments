@@ -1,0 +1,12 @@
+﻿flight_no: string .
+flight_date: dateTime .
+taxi_in: int .
+taxi_out: int .
+origin: string @index(exact, fulltext) @count .
+destination: string @index(exact, fulltext) @count .
+arrival_delay: int .
+departure_delay: int .
+cancellation_code: string .
+weather_delay: int .
+nas_delay: int .
+security_delay: int .
