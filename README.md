@@ -186,6 +186,10 @@ And it yields the following result:
 }
 ```
 
+## TODO ##
+
+There are many things I need to look into like Node UIDs, Batch Processing, Indexes, Facets, Edges, RDF. So far this repository is a working example for reading the Airline on Time Performance Data from CSV into Dgraph, and make a first simple query to get data out of it. More to come as soon as I find the time ... 
+
 [Dgraph GraqhQL+- Query]: https://docs.dgraph.io/query-language
 [Dgraph]: https://dgraph.io/
 [Dgraph Documentation]: https://docs.dgraph.io/
