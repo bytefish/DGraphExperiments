@@ -82,7 +82,7 @@ namespace DGraphExperiments
                 // As an Observable:
                 .ToObservable()
                 // Batch Entities by Time / Count:
-                .Buffer(TimeSpan.FromSeconds(5), 100)
+                .Buffer(TimeSpan.FromSeconds(1), 1000)
                 // And subscribe to the Batch synchronously (we don't want to handle too much backpressure here):
                 .Subscribe(records =>
                 {

@@ -13,6 +13,18 @@ namespace DGraphExperiments.DGraph.Model
 
         [JsonProperty("flight_date")]
         public DateTime FlightDate { get; set; }
+        
+        [JsonProperty("year")]
+        public int Year { get; set; }
+
+        [JsonProperty("month")]
+        public int Month { get; set; }
+
+        [JsonProperty("day_of_month")]
+        public int DayOfMonth { get; set; }
+
+        [JsonProperty("day_of_week")]
+        public int DayOfWeek { get; set; }
 
         [JsonProperty("taxi_in")]
         public int TaxiIn { get; set; }
@@ -23,14 +35,23 @@ namespace DGraphExperiments.DGraph.Model
         [JsonProperty("origin")]
         public string Origin { get; set; }
 
+        [JsonProperty("origin_airport")]
+        public string OriginAirport { get; set; }
+
         [JsonProperty("destination")]
         public string Destination { get; set; }
 
+        [JsonProperty("destination_airport")]
+        public string DestinationAirport { get; set; }
+        
         [JsonProperty("arrival_delay")]
         public int ArrivalDelay { get; set; }
 
         [JsonProperty("departure_delay")]
         public int DepartureDelay { get; set; }
+
+        [JsonProperty("is_cancelled")]
+        public bool IsCancelled { get; set; }
 
         [JsonProperty("cancellation_code")]
         public string CancellationCode { get; set; }
