@@ -70,8 +70,6 @@ namespace DGraphExperiments
         
         private static void ProcessFlights(DGraphClient client, string csvFilePath)
         {
-
-            
             // Create the Converter:
             var converter = new FlightConverter();
 
@@ -83,9 +81,9 @@ namespace DGraphExperiments
                 .ReadFromFile(csvFilePath, Encoding.UTF8)
                 // As an Observable:
                 .ToObservable()
-                // Batch in 10000 Entities / or wait 5 Seconds:
-                .Buffer(TimeSpan.FromSeconds(5), 10000)
-                // And subscribe to the Batch
+                // Batch Entities by Time / Count:
+                .Buffer(TimeSpan.FromSeconds(5), 100)
+                // And subscribe to the Batch synchronously (we don't want to handle too much backpressure here):
                 .Subscribe(records =>
                 {
                     var validRecords = records
