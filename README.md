@@ -44,7 +44,7 @@ dgraph server -l 2048
 I put the query in a file ``los_angeles_departures.txt`` and query [Dgraph] with curl:
 
 ```
-curl localhost:8080/query -X POST -d @los_angeles_departures.txt > 1.txt
+curl localhost:8080/query -X POST -d @los_angeles_departures.txt
 ```
 
 And it yields the following result:
