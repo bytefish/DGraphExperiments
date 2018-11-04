@@ -5,6 +5,9 @@
 	month,
 	day_of_month,
 	origin,
-	destination
+	destination,
+	arrival_delay,
+	departure_delay,
+	weather_delay
   }
 }
