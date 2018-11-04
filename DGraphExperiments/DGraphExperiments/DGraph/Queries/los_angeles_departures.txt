@@ -1,0 +1,10 @@
+﻿{
+  lax_departures(func: eq(origin, "LAX")) {
+	flight_no,
+	year,
+	month,
+	day_of_month,
+	origin,
+	destination
+  }
+}
